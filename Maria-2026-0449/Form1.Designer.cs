@@ -49,6 +49,7 @@
             chkFinSemana = new CheckBox();
             btnFinSemana = new Button();
             btnDesglose = new Button();
+            btnCuentaTotal = new Button();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudTarifa).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudTasa).BeginInit();
@@ -258,11 +259,22 @@
             btnDesglose.UseVisualStyleBackColor = true;
             btnDesglose.Click += btnDesglose_Click;
             // 
+            // btnCuentaTotal
+            // 
+            btnCuentaTotal.Location = new Point(568, 121);
+            btnCuentaTotal.Name = "btnCuentaTotal";
+            btnCuentaTotal.Size = new Size(81, 23);
+            btnCuentaTotal.TabIndex = 27;
+            btnCuentaTotal.Text = "Cuenta total";
+            btnCuentaTotal.UseVisualStyleBackColor = true;
+            btnCuentaTotal.Click += btnCuentaTotal_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(709, 523);
+            Controls.Add(btnCuentaTotal);
             Controls.Add(btnDesglose);
             Controls.Add(btnFinSemana);
             Controls.Add(chkFinSemana);
@@ -319,5 +331,6 @@
         private CheckBox chkFinSemana;
         private Button btnFinSemana;
         private Button btnDesglose;
+        private Button btnCuentaTotal;
     }
 }
