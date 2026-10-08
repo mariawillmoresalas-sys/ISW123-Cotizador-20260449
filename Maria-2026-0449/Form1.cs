@@ -14,6 +14,15 @@ namespace Maria_2026_0449
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             // Event handler placeholder; actualizar según la lógica de la aplicación
+
+
+
+
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

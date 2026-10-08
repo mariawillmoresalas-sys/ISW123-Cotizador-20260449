@@ -1,3 +1,6 @@
 <Solution>
+  <Folder Name="/Elementos de la solución/">
+    <File Path="Reserva.cs" />
+  </Folder>
   <Project Path="Maria-2026-0449/Maria-2026-0449.csproj" />
 </Solution>
