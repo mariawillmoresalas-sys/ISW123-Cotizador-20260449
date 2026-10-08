@@ -33,7 +33,6 @@
             lblTarifa = new Label();
             txtHuesped = new TextBox();
             nudNoches = new NumericUpDown();
-            btnCalcular = new Button();
             btnLimpiar = new Button();
             btnCopiar = new Button();
             btnNivel1 = new Button();
@@ -50,6 +49,11 @@
             btnFinSemana = new Button();
             btnDesglose = new Button();
             btnCuentaTotal = new Button();
+            btnTraslado = new Button();
+            btnExcursion = new Button();
+            btnMinibar = new Button();
+            btnFactura = new Button();
+            btnViejo = new Button();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudTarifa).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudTasa).BeginInit();
@@ -102,16 +106,6 @@
             nudNoches.TextAlign = HorizontalAlignment.Center;
             nudNoches.Value = new decimal(new int[] { 8, 0, 0, 0 });
             // 
-            // btnCalcular
-            // 
-            btnCalcular.Location = new Point(151, 119);
-            btnCalcular.Name = "btnCalcular";
-            btnCalcular.Size = new Size(75, 23);
-            btnCalcular.TabIndex = 8;
-            btnCalcular.Text = "Calcular";
-            btnCalcular.UseVisualStyleBackColor = true;
-            btnCalcular.Click += btnCalcular_Click;
-            // 
             // btnLimpiar
             // 
             btnLimpiar.Location = new Point(151, 148);
@@ -120,6 +114,7 @@
             btnLimpiar.TabIndex = 9;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // btnCopiar
             // 
@@ -132,7 +127,7 @@
             // 
             // btnNivel1
             // 
-            btnNivel1.Location = new Point(242, 148);
+            btnNivel1.Location = new Point(232, 148);
             btnNivel1.Name = "btnNivel1";
             btnNivel1.Size = new Size(75, 23);
             btnNivel1.TabIndex = 12;
@@ -151,7 +146,7 @@
             // 
             // btnPesos
             // 
-            btnPesos.Location = new Point(349, 119);
+            btnPesos.Location = new Point(284, 109);
             btnPesos.Name = "btnPesos";
             btnPesos.Size = new Size(104, 23);
             btnPesos.TabIndex = 14;
@@ -172,7 +167,7 @@
             // 
             // nudTasa
             // 
-            nudTasa.Location = new Point(72, 119);
+            nudTasa.Location = new Point(72, 113);
             nudTasa.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             nudTasa.Minimum = new decimal(new int[] { 2, 0, 0, 0 });
             nudTasa.Name = "nudTasa";
@@ -194,7 +189,7 @@
             // 
             // btnPorPersona
             // 
-            btnPorPersona.Location = new Point(242, 119);
+            btnPorPersona.Location = new Point(173, 111);
             btnPorPersona.Name = "btnPorPersona";
             btnPorPersona.Size = new Size(93, 23);
             btnPorPersona.TabIndex = 19;
@@ -222,7 +217,7 @@
             // 
             // btnDeposito
             // 
-            btnDeposito.Location = new Point(349, 150);
+            btnDeposito.Location = new Point(322, 148);
             btnDeposito.Name = "btnDeposito";
             btnDeposito.Size = new Size(104, 23);
             btnDeposito.TabIndex = 22;
@@ -233,7 +228,7 @@
             // chkFinSemana
             // 
             chkFinSemana.AutoSize = true;
-            chkFinSemana.Location = new Point(12, 191);
+            chkFinSemana.Location = new Point(12, 218);
             chkFinSemana.Name = "chkFinSemana";
             chkFinSemana.Size = new Size(161, 19);
             chkFinSemana.TabIndex = 25;
@@ -242,7 +237,7 @@
             // 
             // btnFinSemana
             // 
-            btnFinSemana.Location = new Point(472, 121);
+            btnFinSemana.Location = new Point(425, 111);
             btnFinSemana.Name = "btnFinSemana";
             btnFinSemana.Size = new Size(75, 23);
             btnFinSemana.TabIndex = 0;
@@ -251,7 +246,7 @@
             // 
             // btnDesglose
             // 
-            btnDesglose.Location = new Point(472, 150);
+            btnDesglose.Location = new Point(442, 146);
             btnDesglose.Name = "btnDesglose";
             btnDesglose.Size = new Size(75, 23);
             btnDesglose.TabIndex = 26;
@@ -261,7 +256,7 @@
             // 
             // btnCuentaTotal
             // 
-            btnCuentaTotal.Location = new Point(568, 121);
+            btnCuentaTotal.Location = new Point(533, 111);
             btnCuentaTotal.Name = "btnCuentaTotal";
             btnCuentaTotal.Size = new Size(81, 23);
             btnCuentaTotal.TabIndex = 27;
@@ -269,11 +264,67 @@
             btnCuentaTotal.UseVisualStyleBackColor = true;
             btnCuentaTotal.Click += btnCuentaTotal_Click;
             // 
+            // btnTraslado
+            // 
+            btnTraslado.Location = new Point(523, 146);
+            btnTraslado.Name = "btnTraslado";
+            btnTraslado.Size = new Size(75, 23);
+            btnTraslado.TabIndex = 28;
+            btnTraslado.Text = "Traslado";
+            btnTraslado.UseVisualStyleBackColor = true;
+            btnTraslado.Click += btnTraslado_Click;
+            // 
+            // btnExcursion
+            // 
+            btnExcursion.Location = new Point(303, 80);
+            btnExcursion.Name = "btnExcursion";
+            btnExcursion.Size = new Size(75, 23);
+            btnExcursion.TabIndex = 29;
+            btnExcursion.Text = "Excursion";
+            btnExcursion.UseVisualStyleBackColor = true;
+            btnExcursion.Click += btnExcursion_Click;
+            // 
+            // btnMinibar
+            // 
+            btnMinibar.Location = new Point(393, 82);
+            btnMinibar.Name = "btnMinibar";
+            btnMinibar.Size = new Size(75, 23);
+            btnMinibar.TabIndex = 30;
+            btnMinibar.Text = "Mini bar";
+            btnMinibar.UseVisualStyleBackColor = true;
+            btnMinibar.Click += btnMinibar_Click;
+            // 
+            // btnFactura
+            // 
+            btnFactura.Location = new Point(211, 82);
+            btnFactura.Name = "btnFactura";
+            btnFactura.RightToLeft = RightToLeft.Yes;
+            btnFactura.Size = new Size(75, 23);
+            btnFactura.TabIndex = 31;
+            btnFactura.Text = "Factura";
+            btnFactura.UseVisualStyleBackColor = true;
+            btnFactura.Click += btnFactura_Click;
+            // 
+            // btnViejo
+            // 
+            btnViejo.Location = new Point(484, 82);
+            btnViejo.Name = "btnViejo";
+            btnViejo.Size = new Size(148, 23);
+            btnViejo.TabIndex = 32;
+            btnViejo.Text = "Probar sistema viejo";
+            btnViejo.UseVisualStyleBackColor = true;
+            btnViejo.Click += btnViejo_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(709, 523);
+            Controls.Add(btnViejo);
+            Controls.Add(btnFactura);
+            Controls.Add(btnMinibar);
+            Controls.Add(btnExcursion);
+            Controls.Add(btnTraslado);
             Controls.Add(btnCuentaTotal);
             Controls.Add(btnDesglose);
             Controls.Add(btnFinSemana);
@@ -290,7 +341,6 @@
             Controls.Add(btnNivel1);
             Controls.Add(btnCopiar);
             Controls.Add(btnLimpiar);
-            Controls.Add(btnCalcular);
             Controls.Add(nudNoches);
             Controls.Add(txtHuesped);
             Controls.Add(lblTarifa);
@@ -313,8 +363,6 @@
         private Label lblTarifa;
         private TextBox txtHuesped;
         private NumericUpDown nudNoches;
-      
-        private Button btnCalcular;
         private Button btnLimpiar;
         private Button btnCopiar;
         private Button btnNivel1;
@@ -332,5 +380,10 @@
         private Button btnFinSemana;
         private Button btnDesglose;
         private Button btnCuentaTotal;
+        private Button btnTraslado;
+        private Button btnExcursion;
+        private Button btnMinibar;
+        private Button btnFactura;
+        private Button btnViejo;
     }
 }

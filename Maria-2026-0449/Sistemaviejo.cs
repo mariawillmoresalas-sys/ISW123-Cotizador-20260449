@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Maria_2026_0449
 {
-    public class Sistemaviejo
+    public class SistemaViejo
     {
         public static decimal CalcularDeposito(decimal total)
         {
