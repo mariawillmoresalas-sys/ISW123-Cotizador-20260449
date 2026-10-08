@@ -32,25 +32,15 @@
             lblNoches = new Label();
             lblTarifa = new Label();
             txtHues = new TextBox();
-            lblSubtotal = new Label();
             txtTarifa = new TextBox();
             nudNoches = new NumericUpDown();
             chcTemporada = new CheckBox();
             btnCalcular = new Button();
             btnLimpiar = new Button();
-            grpCotizacion = new GroupBox();
-            lbl4repuestaTotal = new Label();
-            lbl3repuestaServicio = new Label();
-            lbl2resultadoItbis = new Label();
-            lbl1repuestaDescuento = new Label();
-            lblresultadoSubtotal = new Label();
-            lblTotal = new Label();
-            lblServicio = new Label();
-            lblITBIS = new Label();
-            lblDescuento = new Label();
             btnCopiar = new Button();
+            btnNivel1 = new Button();
+            lstResultados = new ListBox();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
-            grpCotizacion.SuspendLayout();
             SuspendLayout();
             // 
             // lblHuesped
@@ -87,15 +77,6 @@
             txtHues.Size = new Size(316, 23);
             txtHues.TabIndex = 3;
             txtHues.TextChanged += textBox1_TextChanged;
-            // 
-            // lblSubtotal
-            // 
-            lblSubtotal.AutoSize = true;
-            lblSubtotal.Location = new Point(16, 31);
-            lblSubtotal.Name = "lblSubtotal";
-            lblSubtotal.Size = new Size(51, 15);
-            lblSubtotal.TabIndex = 4;
-            lblSubtotal.Text = "Subtotal";
             // 
             // txtTarifa
             // 
@@ -144,108 +125,6 @@
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = true;
             // 
-            // grpCotizacion
-            // 
-            grpCotizacion.Controls.Add(lbl4repuestaTotal);
-            grpCotizacion.Controls.Add(lbl3repuestaServicio);
-            grpCotizacion.Controls.Add(lbl2resultadoItbis);
-            grpCotizacion.Controls.Add(lbl1repuestaDescuento);
-            grpCotizacion.Controls.Add(lblresultadoSubtotal);
-            grpCotizacion.Controls.Add(lblTotal);
-            grpCotizacion.Controls.Add(lblServicio);
-            grpCotizacion.Controls.Add(lblITBIS);
-            grpCotizacion.Controls.Add(lblDescuento);
-            grpCotizacion.Controls.Add(lblSubtotal);
-            grpCotizacion.Location = new Point(23, 261);
-            grpCotizacion.Name = "grpCotizacion";
-            grpCotizacion.Size = new Size(388, 177);
-            grpCotizacion.TabIndex = 10;
-            grpCotizacion.TabStop = false;
-            grpCotizacion.Text = "Cotización";
-            // 
-            // lbl4repuestaTotal
-            // 
-            lbl4repuestaTotal.AutoSize = true;
-            lbl4repuestaTotal.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl4repuestaTotal.Location = new Point(343, 148);
-            lbl4repuestaTotal.Name = "lbl4repuestaTotal";
-            lbl4repuestaTotal.Size = new Size(33, 17);
-            lbl4repuestaTotal.TabIndex = 13;
-            lbl4repuestaTotal.Text = "0.00";
-            // 
-            // lbl3repuestaServicio
-            // 
-            lbl3repuestaServicio.AutoSize = true;
-            lbl3repuestaServicio.Location = new Point(343, 115);
-            lbl3repuestaServicio.Name = "lbl3repuestaServicio";
-            lbl3repuestaServicio.Size = new Size(28, 15);
-            lbl3repuestaServicio.TabIndex = 12;
-            lbl3repuestaServicio.Text = "0.00";
-            // 
-            // lbl2resultadoItbis
-            // 
-            lbl2resultadoItbis.AutoSize = true;
-            lbl2resultadoItbis.Location = new Point(343, 86);
-            lbl2resultadoItbis.Name = "lbl2resultadoItbis";
-            lbl2resultadoItbis.Size = new Size(28, 15);
-            lbl2resultadoItbis.TabIndex = 11;
-            lbl2resultadoItbis.Text = "0.00";
-            // 
-            // lbl1repuestaDescuento
-            // 
-            lbl1repuestaDescuento.AutoSize = true;
-            lbl1repuestaDescuento.Location = new Point(343, 58);
-            lbl1repuestaDescuento.Name = "lbl1repuestaDescuento";
-            lbl1repuestaDescuento.Size = new Size(28, 15);
-            lbl1repuestaDescuento.TabIndex = 10;
-            lbl1repuestaDescuento.Text = "0.00";
-            // 
-            // lblresultadoSubtotal
-            // 
-            lblresultadoSubtotal.AutoSize = true;
-            lblresultadoSubtotal.Location = new Point(343, 31);
-            lblresultadoSubtotal.Name = "lblresultadoSubtotal";
-            lblresultadoSubtotal.Size = new Size(28, 15);
-            lblresultadoSubtotal.TabIndex = 9;
-            lblresultadoSubtotal.Text = "0.00";
-            // 
-            // lblTotal
-            // 
-            lblTotal.AutoSize = true;
-            lblTotal.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotal.Location = new Point(16, 148);
-            lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(78, 17);
-            lblTotal.TabIndex = 8;
-            lblTotal.Text = "TOTAL USD";
-            // 
-            // lblServicio
-            // 
-            lblServicio.AutoSize = true;
-            lblServicio.Location = new Point(16, 115);
-            lblServicio.Name = "lblServicio";
-            lblServicio.Size = new Size(73, 15);
-            lblServicio.TabIndex = 7;
-            lblServicio.Text = "Servicio 10%";
-            // 
-            // lblITBIS
-            // 
-            lblITBIS.AutoSize = true;
-            lblITBIS.Location = new Point(16, 86);
-            lblITBIS.Name = "lblITBIS";
-            lblITBIS.Size = new Size(58, 15);
-            lblITBIS.TabIndex = 6;
-            lblITBIS.Text = "ITBIS 18%";
-            // 
-            // lblDescuento
-            // 
-            lblDescuento.AutoSize = true;
-            lblDescuento.Location = new Point(16, 58);
-            lblDescuento.Name = "lblDescuento";
-            lblDescuento.Size = new Size(63, 15);
-            lblDescuento.TabIndex = 5;
-            lblDescuento.Text = "Descuento";
-            // 
             // btnCopiar
             // 
             btnCopiar.Location = new Point(114, 464);
@@ -255,13 +134,33 @@
             btnCopiar.Text = "Copiar para whatsapp";
             btnCopiar.UseVisualStyleBackColor = true;
             // 
+            // btnNivel1
+            // 
+            btnNivel1.Location = new Point(23, 160);
+            btnNivel1.Name = "btnNivel1";
+            btnNivel1.Size = new Size(75, 23);
+            btnNivel1.TabIndex = 12;
+            btnNivel1.Text = "Nivel1";
+            btnNivel1.UseVisualStyleBackColor = true;
+            btnNivel1.Click += btnNivel1_Click;
+            // 
+            // lstResultados
+            // 
+            lstResultados.FormattingEnabled = true;
+            lstResultados.Location = new Point(23, 284);
+            lstResultados.Name = "lstResultados";
+            lstResultados.Size = new Size(388, 139);
+            lstResultados.TabIndex = 13;
+            lstResultados.SelectedIndexChanged += lstResultados_SelectedIndexChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(475, 523);
+            Controls.Add(lstResultados);
+            Controls.Add(btnNivel1);
             Controls.Add(btnCopiar);
-            Controls.Add(grpCotizacion);
             Controls.Add(btnLimpiar);
             Controls.Add(btnCalcular);
             Controls.Add(chcTemporada);
@@ -272,10 +171,8 @@
             Controls.Add(lblNoches);
             Controls.Add(lblHuesped);
             Name = "Form1";
-            Text = "Form1";
+            Text = "CotizadorVillaCoral-Maria-Teresa-Salas-W:2026-0449";
             ((System.ComponentModel.ISupportInitialize)nudNoches).EndInit();
-            grpCotizacion.ResumeLayout(false);
-            grpCotizacion.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -286,22 +183,13 @@
         private Label lblNoches;
         private Label lblTarifa;
         private TextBox txtHues;
-        private Label lblSubtotal;
         private TextBox txtTarifa;
         private NumericUpDown nudNoches;
         private CheckBox chcTemporada;
         private Button btnCalcular;
         private Button btnLimpiar;
-        private GroupBox grpCotizacion;
         private Button btnCopiar;
-        private Label lblITBIS;
-        private Label lblDescuento;
-        private Label lblresultadoSubtotal;
-        private Label lblTotal;
-        private Label lblServicio;
-        private Label lbl3repuestaServicio;
-        private Label lbl2resultadoItbis;
-        private Label lbl1repuestaDescuento;
-        private Label lbl4repuestaTotal;
+        private Button btnNivel1;
+        private ListBox lstResultados;
     }
 }
