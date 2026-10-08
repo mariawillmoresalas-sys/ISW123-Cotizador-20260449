@@ -11,6 +11,33 @@ namespace Maria_2026_0449
             InitializeComponent();
         }
 
+
+        private Reserva CrearReserva()
+        {
+            return new Reserva
+            {
+                Huesped = txtHuesped.Text,
+                Noches = (int)nudNoches.Value,
+                TarifaPorNoche = nudTarifa.Value
+            };
+        }
+
+        private Reserva CrearReservaConFinDeSemana()
+        {
+            decimal tarifa = nudTarifa.Value;
+            if (chkFinSemana.Checked)
+            {
+                tarifa = tarifa * 1.15m;
+            }
+
+            return new Reserva
+            {
+                Huesped = txtHuesped.Text,
+                Noches = (int)nudNoches.Value,
+                TarifaPorNoche = tarifa
+            };
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             // Event handler placeholder; actualizar según la lógica de la aplicación
@@ -75,5 +102,51 @@ namespace Maria_2026_0449
         {
 
         }
+
+        private void btnPesos_Click(object sender, EventArgs e)
+        {
+            var reserva = CrearReserva();
+            decimal tasa = nudTasa.Value;
+            decimal pesos = reserva.Total * tasa;
+            lstResultados.Items.Add($"Total en pesos: RD$ {pesos:N2}");
+        }
+
+        private void nudTasa_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPorPersona_Click(object sender, EventArgs e)
+        {
+            var reserva = CrearReserva();
+            decimal porPersona = reserva.Total / nudPersonas.Value;
+            lstResultados.Items.Add($"Cada persona paga: US$ {porPersona:N2}");
+        }
+
+        private void btnDeposito_Click(object sender, EventArgs e)
+        {
+            var reserva = CrearReserva();
+            decimal deposito = reserva.Total * 0.30m;
+            decimal saldo = reserva.Total - deposito;
+            lstResultados.Items.Add($"Depósito (30%): US$ {deposito:N2}");
+            lstResultados.Items.Add($"Saldo pendiente: US$ {saldo:N2}");
+        }
+
+        private void btnFinSemana_Click(object sender, EventArgs e)
+        {
+            var reserva = CrearReservaConFinDeSemana();
+            lstResultados.Items.Add($"Total con fin de semana: US$ {reserva.Total:N2}");
+        }
+
+        private void btnDesglose_Click(object sender, EventArgs e)
+        {
+            var reserva = CrearReserva();
+            lstResultados.Items.Add($"Subtotal:       US$ {reserva.Subtotal:N2}");
+            lstResultados.Items.Add($"Descuento:      US$ {reserva.Descuento:N2}");
+            lstResultados.Items.Add($"Base imponible: US$ {reserva.BaseImponible:N2}");
+            lstResultados.Items.Add($"ITBIS (18%):    US$ {reserva.Itbis:N2}");
+            lstResultados.Items.Add($"Servicio (10%): US$ {reserva.Servicio:N2}");
+            lstResultados.Items.Add($"Total:          US$ {reserva.Total:N2}");
+        }
     }
-}
+}          
