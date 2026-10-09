@@ -34,7 +34,6 @@
             txtHuesped = new TextBox();
             nudNoches = new NumericUpDown();
             btnLimpiar = new Button();
-            btnCopiar = new Button();
             btnNivel1 = new Button();
             lstResultados = new ListBox();
             btnPesos = new Button();
